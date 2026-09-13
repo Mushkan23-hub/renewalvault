@@ -229,8 +229,7 @@ end-to-end via the actual CLI, including:
 
 ## Design Diagrams
 
-Full-size diagrams live in [`docs/diagrams/`](docs/diagrams/) and are also embedded in
-`PROJECT_REPORT.pdf`:
+Full-size diagrams live in [`docs/diagrams/`](docs/diagrams/):
 
 - [System Architecture](docs/diagrams/01_system_architecture.png)
 - [Process Flow / Workflow](docs/diagrams/02_workflow.png)
@@ -268,7 +267,6 @@ docs/
 ├── diagrams/     # Architecture, workflow, use case, class, ER, and sequence diagrams
 └── screenshots/  # Terminal screenshots referenced above
 
-PROJECT_REPORT.pdf   # Full 15-section project report (see submission requirements)
 build_report.py      # Regenerates PROJECT_REPORT.pdf from the diagrams/screenshots (requires
                       # reportlab + Pillow; not needed to build or run the application itself)
 ```
