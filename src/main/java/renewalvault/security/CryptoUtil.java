@@ -1,3 +1,4 @@
+// CryptoUtil: AES-256-GCM encryption/decryption and PBKDF2 key derivation utilities. No external crypto library used.
 package renewalvault.security;
 
 import javax.crypto.Cipher;
@@ -75,3 +76,4 @@ public final class CryptoUtil {
         return java.security.MessageDigest.isEqual(a, b);
     }
 }
+
