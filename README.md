@@ -122,8 +122,8 @@ required — just `javac` and `java`.
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/Mushkan23-hub/renewalvault.git
+cd renewalvault
 ```
 
 ### 2. Compile
@@ -229,7 +229,8 @@ end-to-end via the actual CLI, including:
 
 ## Design Diagrams
 
-Full-size diagrams live in [`docs/diagrams/`](docs/diagrams/):
+Full-size diagrams live in [`docs/diagrams/`](docs/diagrams/) and are also embedded in
+the project report (submitted separately to the VITyarthi portal as `PROJECT_REPORT.pdf`):
 
 - [System Architecture](docs/diagrams/01_system_architecture.png)
 - [Process Flow / Workflow](docs/diagrams/02_workflow.png)
@@ -267,8 +268,9 @@ docs/
 ├── diagrams/     # Architecture, workflow, use case, class, ER, and sequence diagrams
 └── screenshots/  # Terminal screenshots referenced above
 
-build_report.py      # Regenerates PROJECT_REPORT.pdf from the diagrams/screenshots (requires
-                      # reportlab + Pillow; not needed to build or run the application itself)
+build_report.py      # Regenerates PROJECT_REPORT.pdf (submitted separately to the portal,
+                      # not stored in this repo). Requires reportlab + Pillow; not needed to
+                      # build or run the application itself.
 ```
 
 See `IMPROVEMENTS.md` for a detailed before/after of what was added on
@@ -276,6 +278,6 @@ top of the original scope and why.
 
 ## Author
 
-Mushkan — B.Tech CSE (Cyber Security & Digital Forensics), VIT Bhopal University
+Mushkan Bhagat (Reg. No. 24BCY10275) — B.Tech CSE (Cyber Security & Digital Forensics), VIT Bhopal University
 
 Submitted for: **Programming in Java** (VITyarthi — Build Your Own Project)
