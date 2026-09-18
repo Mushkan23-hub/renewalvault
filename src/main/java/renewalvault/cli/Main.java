@@ -1,3 +1,4 @@
+// Main: CLI entry point handling the login flow, 18-option menu, and user interaction.
 package renewalvault.cli;
 
 import renewalvault.db.FileStore;
@@ -694,3 +695,4 @@ public class Main {
         }
     }
 }
+
