@@ -1,3 +1,4 @@
+// FileStore: generic encrypted persistence layer, type-agnostic over any Serializable model.
 package renewalvault.db;
 
 import javax.crypto.spec.SecretKeySpec;
@@ -91,3 +92,4 @@ public class FileStore<T extends Serializable> {
         }
     }
 }
+
