@@ -1,3 +1,4 @@
+// TrackedItem: core domain entity representing one tracked deadline/renewal item, including its weighted risk score calculation.
 package renewalvault.model;
 
 import java.io.Serializable;
@@ -168,3 +169,4 @@ public class TrackedItem implements Serializable {
                 riskScore(), tagStr);
     }
 }
+
