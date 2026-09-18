@@ -1,3 +1,4 @@
+// ReminderEngine: risk-weighted urgency queue, hash-chained audit log, and renewal streak tracking.
 package renewalvault.engine;
 
 import renewalvault.db.FileStore;
@@ -219,3 +220,4 @@ public class ReminderEngine {
                         Collectors.summingDouble(TrackedItem::getEstimatedCost)));
     }
 }
+
