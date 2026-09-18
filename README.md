@@ -135,9 +135,15 @@ find src -name "*.java" > sources.txt
 javac -d out @sources.txt
 ```
 
-(On Windows, `find` isn't available — instead run:
-`javac -d out $(Get-ChildItem -Recurse -Filter *.java -Path src | % FullName)`
-in PowerShell, or simply list the files manually.)
+**On Windows (Command Prompt):**
+
+    dir /s /b src\*.java > sources.txt
+    javac -d out @sources.txt
+
+**On Windows (PowerShell):**
+
+    Get-ChildItem -Recurse -Filter *.java -Path src | % FullName | Set-Content sources.txt
+    javac -d out @sources.txt
 
 ### 3. Run
 
@@ -250,16 +256,16 @@ src/main/java/renewalvault/
 ├── engine/
 │   ├── VaultService.java     # Module 1: item management, search/filter/sort, undo, edit
 │   ├── ReminderEngine.java   # Module 2: risk-weighted urgency engine, audit chain, streaks
-│   ├── AnalyticsEngine.java  # Module 5: budget analytics & ASCII charts
-│   ├── ExportEngine.java     # Module 6: CSV backup/restore + .ics calendar export
-│   └── BackupEngine.java     # Module 7: single-file encrypted vault backup/restore
+│   ├── AnalyticsEngine.java  # Module 3: budget analytics & ASCII charts
+│   ├── ExportEngine.java     # Module 4: CSV backup/restore + .ics calendar export
+│   └── BackupEngine.java     # Module 5: single-file encrypted vault backup/restore
 ├── security/
-│   ├── CryptoUtil.java       # AES-256-GCM + PBKDF2 (no external crypto library)
+│   ├── CryptoUtil.java       # Module 6: AES-256-GCM + PBKDF2 (no external crypto library)
 │   └── VaultAuth.java        # Master-password setup/unlock/rotation, salt + verifier storage
 ├── db/
-│   └── FileStore.java        # Module 3: generic encrypted file-based persistence
+│   └── FileStore.java        # Generic encrypted file-based persistence (used by Modules 1-5)
 ├── cli/
-│   ├── Main.java              # Module 4: CLI menu, login flow, and reporting
+│   ├── Main.java              # Module 7: CLI menu, login flow, and reporting
 │   └── ConsoleColors.java     # ANSI color helper for the urgency dashboard
 └── test/
     └── TestRunner.java        # Zero-dependency automated regression suite (see Testing)
